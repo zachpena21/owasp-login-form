@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OWASP Login Form Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">OWASP Login Demo</div>
+    <div class="subtitle">Cybersecurity HW 2-B</div>
+  </header>
+
+  <main>
+    <section class="login-card" aria-labelledby="login-heading">
+      <h1 id="login-heading">Login</h1>
+      <p class="intro">Enter an email and password to test client-side and server-side validation.</p>
+
+      <form id="loginForm" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" autocomplete="email" placeholder="student@example.com">
+        <p id="emailError" class="field-error" aria-live="polite"></p>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="At least 8 characters">
+        <p id="passwordError" class="field-error" aria-live="polite"></p>
+
+        <button type="submit">Log in</button>
+      </form>
+
+      <div id="result" class="result" role="status" aria-live="polite"></div>
+
+      <div class="requirements">
+        <strong>Validation requirements</strong>
+        <ul>
+          <li>Neither field may be empty.</li>
+          <li>Email must contain an @ symbol.</li>
+          <li>Password must contain at least 8 characters.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
